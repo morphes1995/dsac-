@@ -51,5 +51,20 @@ add_executable(dsac__ main.cpp
 #        traceback/restoreIpAddress.cpp
 #        array_related/threeSum.cpp
 #        array_related/maxWaterContainer.cpp
-        hash/groupAnagrams.cpp
+#        hash/groupAnagrams.cpp
+#        traceback/predicateTheWinner.cpp
+#        traceback/reverse_stack.cpp
+#        traceback/translateNum.cpp
+#        traceback/most_value_of_package.cpp
+        hash/implement_a_hashmap.cpp
+        graph_related/graph.h
+        graph_related/traverse.cpp
+        string_related/string_to_int.cpp
+        string_related/longestUniqueSubstring.cpp
+        string_related/longestPalindromeSubstring.cpp
+        string_related/add_two_string.cpp
+        string_related/minCoverdSubstring.cpp
+        string_related/compareSubVersion.cpp
+        string_related/string_multiply.cpp
+        string_related/longestCommonPrefix.cpp
 )

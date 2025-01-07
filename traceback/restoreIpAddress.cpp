@@ -22,6 +22,7 @@ class Solution {
     void dfs(vector<string> &res,string s,int startIdx,list<string>  &curIp){
 
         if(startIdx==s.length()){
+          // // 遍历到了字符串的末尾，如果此时curIP中正好包含了四个字符串，则拼接为一个IP地址，放入到结果集
             if(curIp.size()==4){
                 string ip;
 
@@ -36,6 +37,7 @@ class Solution {
         }
 
         if(s[startIdx]=='0'){
+            // 本subNet的第一个字符为0的情况，此时 本段IP只能是 “0”， 其他以“0”开头的字符串都是非法的
             curIp.push_back("0");
             dfs(res,s,startIdx+1,curIp);
             curIp.pop_back();
@@ -47,6 +49,7 @@ class Solution {
 
             char c = s[i];
             sub = sub*10 + (c-'0');
+            // 任何 (0,255]内的值都可以作为本Ip段的值
             if (sub>255){
                 break;
             }

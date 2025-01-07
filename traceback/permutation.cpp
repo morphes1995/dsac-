@@ -82,6 +82,8 @@ public:
             swap(nums,startIdx, i);
         }*/
 
+        //  1   1   2  1
+        //  对于 nums[0] nums[1] nums[3], 不需要交换，交换了会产生重复组合
         set<int> visited;
         for(int i=startIdx;i<nums.size();i++){
             if(visited.count(nums[i])){
