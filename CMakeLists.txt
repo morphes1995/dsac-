@@ -56,15 +56,24 @@ add_executable(dsac__ main.cpp
 #        traceback/reverse_stack.cpp
 #        traceback/translateNum.cpp
 #        traceback/most_value_of_package.cpp
-        hash/implement_a_hashmap.cpp
-        graph_related/graph.h
-        graph_related/traverse.cpp
-        string_related/string_to_int.cpp
-        string_related/longestUniqueSubstring.cpp
-        string_related/longestPalindromeSubstring.cpp
-        string_related/add_two_string.cpp
+#        hash/implement_a_hashmap.cpp
+#        graph_related/graph.h
+#        graph_related/traverse.cpp
+#        string_related/string_to_int.cpp
+#        string_related/longestUniqueSubstring.cpp
+#        string_related/longestPalindromeSubstring.cpp
+#        string_related/add_two_string.cpp
         string_related/minCoverdSubstring.cpp
-        string_related/compareSubVersion.cpp
-        string_related/string_multiply.cpp
-        string_related/longestCommonPrefix.cpp
+        sort_related2/sort_colors.cpp
+        array_related/groupEvenODD.cpp
+        string_related/replaceSpace.cpp
+        #        sort_related2/merge_sort.cpp
+#        sort_related2/left_small_sum.cpp
+#        sort_related2/countSmaller.cpp
+#        sort_related2/reversePairsNum.cpp
+#        sort_related2/radixSort.cpp
+#        sort_related2/quickSort.cpp
+        #        string_related/compareSubVersion.cpp
+#        string_related/string_multiply.cpp
+#        string_related/longestCommonPrefix.cpp
 )
