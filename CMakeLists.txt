@@ -67,4 +67,10 @@ add_executable(dsac__ main.cpp
         string_related/compareSubVersion.cpp
         string_related/string_multiply.cpp
         string_related/longestCommonPrefix.cpp
+        linked_list/partition_list.cpp
+        linked_list/deleteDuplicates.cpp
+        linked_list/ratate_list.cpp
+        linked_list/reorder_list.cpp
+        sort_related/sort.cpp
+        sort_related/sort_almost_sorted_array.cpp
 )

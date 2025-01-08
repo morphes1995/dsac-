@@ -18,7 +18,7 @@
         int[] res = new int[len1+len2];
         for(int i=len1-1;i>=0;i--){
             for(int j =len2-1;j>=0;j--){
-                int tmp = (num1.charAt(i)-'0') * (num2.charAt(j)-'0') + res[i+j+1]; //
+                int tmp = (num1.charAt(i)-'0') * (num2.charAt(j)-'0') + res[i+j+1]; // res[i+j+1];扮演carry 的角色
                 res[i+j+1]  =  tmp%10;  // 由于此时 个位上的 数字已经加到了 tmp中， 此时 需要使用tmp%10的值 `重置` res[i+j+1]位
                 res[i+j] += tmp/10;     // tmp的计算没有涉及到 高位  res[i+j]，  因此 需要将 tmp进位到res[i+j]位的值 `累加`到  res[i+j]位中
             }

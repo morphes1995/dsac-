@@ -29,3 +29,26 @@ public:
         return dummy->next; 
     }
 };
+
+/**
+ * 剑指offer 18 : O(1)时间内删除链表中的一个节点 (给定的节点 node 可能是链表中的最后一个节点)
+ */
+// 删除链表中给定值的第一个出现的节点
+ListNode* deleteNode(ListNode *head, int val) {
+    ListNode *dummyNode = new ListNode();
+    dummyNode->next = head;
+
+    ListNode *pre = dummyNode;
+    ListNode *cur = pre->next;
+    while(cur!=nullptr){
+        if(cur->val==val){
+            pre->next=cur->next;
+            break;
+        }
+        pre=cur;
+        cur=cur->next;
+    }
+
+    return dummyNode->next;
+}
+

@@ -55,6 +55,53 @@ public:
     }
 };
 
+/**
+ * leetcode 147. 对链表进行插入排序
+ */
+public ListNode insertionSortList(ListNode head) {
+    if(head==null){
+        return head;
+    }
+
+    ListNode newDummyNode = new ListNode();
+
+    ListNode dummyNode = new ListNode();
+    dummyNode.next= head;
+    ListNode pre = dummyNode;
+
+    ListNode curr = head;
+    while(curr!=null){ // 对于每个节点都要进行比较，并插入，性能差
+        ListNode next = curr.next;
+        pre.next =next;
+        curr.next =null;
+        insert(newDummyNode,curr);
+
+        curr = next;
+    }
+
+    return newDummyNode.next;
+}
+
+private void insert(ListNode head, ListNode node){
+
+    ListNode pre = head;
+    ListNode cur = head.next;
+
+    while(cur!=null){
+        if(cur.val>node.val){
+            pre.next=node;
+            node.next=cur;
+            break;
+        }
+        pre =cur;
+        cur = cur.next;
+    }
+
+    if(cur==null){
+        pre.next = node;
+    }
+}
+
 // int main() {
 //     ListNode n4(4);
 //     ListNode n3(3,&n4);

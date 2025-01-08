@@ -87,6 +87,72 @@ class Solution {
     }
 };
 
+/**
+ * 反转双向链表, 头插法
+ */
+
+ListNode2* reverseList3(ListNode2 *head) {
+    //        if(head==null){
+    //            return null;
+    //        }
+
+    ListNode2 *dummyNode = new ListNode2();
+    ListNode2 *cur = head;
+
+    while(cur!=nullptr){
+        ListNode2 *next = cur->next;
+
+        cur->next=dummyNode->next;
+        if(dummyNode->next!=nullptr){
+            dummyNode->next->before = cur;
+        }
+
+        dummyNode->next = cur;
+        cur->before = dummyNode;
+
+        cur =next;
+    }
+    return dummyNode->next;
+}
+
+/**
+     * leetcode 92. 反转链表II
+     * 给你单链表的头指针 head 和两个整数 left 和 right ，其中 left <= right 。请你反转从位置 left 到位置 right 的链表节点，返回 反转后的链表 。
+     * 思路： 整体采用头插法来反转指定区间的链表
+     * @param head
+     * @param left
+     * @param right
+     * @return
+     */
+public ListNode reverseBetween2(ListNode head, int left, int right) {
+    ListNode dummy =new ListNode(0);
+    dummy.next=head;
+    ListNode pre =dummy;
+    ListNode cur =pre.next;
+
+    // cur 定位到left
+    int i=1;
+    for(;i<left;i++){
+        pre=pre.next;
+        cur=cur.next;
+    }
+    // 此时cur指向第left个节点， pre指向left的前一个节点
+    ListNode reverseRear=cur;
+    for(;i<=right;i++){// 头插进行翻转
+        ListNode next = cur.next;
+
+        cur.next=pre.next;
+        pre.next=cur;
+        cur=next;
+
+    }
+    // 此时cur指向 right+1
+    // 翻转后的区间的最后一个节点的next 指向 第right+1个节点
+    reverseRear.next=cur; // left个节点的next指向right+1个节点
+
+    return dummy.next;
+}
+
 // int main() {
 //     ListNode  *n1 = new ListNode(1);
 //     ListNode  *n2 = new ListNode(2);
