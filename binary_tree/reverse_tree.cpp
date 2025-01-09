@@ -63,6 +63,7 @@ public:
 
     /**
     * 101. 对称二叉树
+    剑指 Offer 28. 对称的二叉树
     * 给你一个二叉树的根节点 root ， 检查它是否轴对称。
      */
     bool isSymmetric(TreeNode* root) {

@@ -76,6 +76,19 @@ add_executable(dsac__ main.cpp
         sort_related2/sort_colors.cpp
         array_related/groupEvenODD.cpp
         string_related/replaceSpace.cpp
+        JIANZHIOFFER/09_2stack_implement_queue.cpp
+        JIANZHIOFFER/10_fibnacci_sequence.cpp
+        JIANZHIOFFER/11_min_val_in_rotateArray.cpp
+        JIANZHIOFFER/robot_moving_scope.cpp
+        JIANZHIOFFER/14_cutting_rope.cpp
+        JIANZHIOFFER/15_hammingweight.cpp
+        JIANZHIOFFER/posOfNum.cpp
+        JIANZHIOFFER/printNumbers.cpp
+        JIANZHIOFFER/18deleteNode.cpp
+        binary_tree/subTree.cpp
+        binary_tree/mirror_tree.cpp
+        stack_related/validStackSequenc.cpp
+        JIANZHIOFFER/37serializeBinaryTree.cpp
         #        sort_related2/merge_sort.cpp
 #        sort_related2/left_small_sum.cpp
 #        sort_related2/countSmaller.cpp

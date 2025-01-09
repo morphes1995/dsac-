@@ -25,7 +25,7 @@ public:
         return res;
     }
 
-    void dfs( List<String> res, int left,int right,String curStr){
+    void dfs List<String> res, int left,int right,String curStr){
         if(left==0 && right==0){
             res.add(curStr);
             return;

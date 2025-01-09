@@ -326,6 +326,55 @@ public:
 
         return res;
     }
+    /**
+    * leetcode 103. 二叉树的锯齿形层序遍历
+    * 思路： 基于层序遍历，使用一个变量控制 从左向右还是右向左
+    * @param root
+    * @return
+    */
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+
+        List<List<Integer>> res = new ArrayList();
+        if(root==null){
+            return res;
+        }
+
+        LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.addFirst(root);
+        boolean leftToRight=true; // 使用一个变量控制 从左向右还是右向左
+        while(!queue.isEmpty()){
+            int levelNodesNum = queue.size();
+            int[] levelNodesarr= new int[levelNodesNum];
+            int count=levelNodesNum;
+            while(count>0){
+
+                TreeNode node = queue.removeLast();
+                if(leftToRight){
+                    levelNodesarr[levelNodesNum-count]=node.val; // 数组由前向后写入数据
+                }else{
+                    levelNodesarr[count-1]=node.val;// 数组由后向前写入数据
+                }
+
+                if(node.left!=null){
+                    queue.addFirst(node.left);
+                }
+                if(node.right!=null){
+                    queue.addFirst(node.right);
+                }
+                count--;
+            }
+
+            ArrayList<Integer> levelData = new ArrayList<Integer>();
+            for (int i = 0; i < levelNodesarr.length; i++) {
+                levelData.add(levelNodesarr[i]);
+            }
+            res.add(levelData);
+
+            leftToRight = !leftToRight; // 改变方向
+        }
+
+        return res;
+    }
 
     /**
     * 199. 二叉树的右视图
