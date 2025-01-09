@@ -96,6 +96,14 @@ add_executable(dsac__ main.cpp
         dp_related/maxValue.cpp
         JianZhiOffer/firstUniqueChar.cpp
         JianZhiOffer/49nthUglyNumber.cpp
+        binary_search_related/searchRange.cpp
+        bit_related/singleNumbers.cpp
+        JIANZHIOFFER/findContinousSequence.cpp
+        string_related/reverseWords.cpp
+        string_related/reverseLeftWords.cpp
+        queue_priority_queue_heap_related/maxQueue.cpp
+        bit_related/add.cpp
+        dp_related/maxProfit.cpp
         #        sort_related2/merge_sort.cpp
 #        sort_related2/left_small_sum.cpp
 #        sort_related2/countSmaller.cpp
