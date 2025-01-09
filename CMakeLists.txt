@@ -89,6 +89,13 @@ add_executable(dsac__ main.cpp
         binary_tree/mirror_tree.cpp
         stack_related/validStackSequenc.cpp
         JIANZHIOFFER/37serializeBinaryTree.cpp
+        traceback/subStringCombination.cpp
+        array_related/majorityElement.cpp
+        array_related/min_number.cpp
+        dp_related/translateNumToString.cpp
+        dp_related/maxValue.cpp
+        JianZhiOffer/firstUniqueChar.cpp
+        JianZhiOffer/49nthUglyNumber.cpp
         #        sort_related2/merge_sort.cpp
 #        sort_related2/left_small_sum.cpp
 #        sort_related2/countSmaller.cpp
